@@ -527,10 +527,10 @@ ESCENARIOS = [
   },
   {
     "id": "E08", "categoria": "Identificación del Vehículo", "peso": 2,
-    "descripcion": "El cliente menciona el modelo sin la marca.",
-    "turns": ["Tengo un Corolla"],
+    "descripcion": "El cliente menciona el modelo sin la marca; luego confirma que es Toyota.",
+    "turns": ["Tengo un Corolla", "Sí, es Toyota"],
     "criterios": [
-      "Intenta confirmar la marca (Toyota Corolla)",
+      "Pide confirmación de la marca antes de recomendar",
       "No recomienda kit sin confirmar marca y modelo",
     ],
   },
@@ -836,8 +836,8 @@ ESCENARIOS = [
     ],
     "criterios": [
       "Confirma la opción de instalación en Cali",
-      "Solicita datos de contacto (teléfono y/o horario)",
-      "Avanza hacia el agendamiento",
+      "Solicita el número de celular del cliente",
+      "Solicita el horario preferido para coordinar",
     ],
   },
   {
@@ -855,15 +855,16 @@ ESCENARIOS = [
   },
   {
     "id": "E36", "categoria": "Cierre de Venta", "peso": 3,
-    "descripcion": "El cliente acepta la llamada con el asesor.",
+    "descripcion": "El cliente acepta la llamada y da su número y horario.",
     "turns": [
       "Hola, soy Pilar, tengo un Nissan 720",
       "Bueno, pueden llamarme",
+      "Mi número es 3001234567, llámame a las 4pm",
     ],
     "criterios": [
-      "Solicita el número de teléfono",
-      "Solicita el horario preferido",
-      "No finaliza sin confirmar ambos datos",
+      "Solicita el número de teléfono y el horario en el mismo mensaje",
+      "Confirma los datos recibidos del cliente",
+      "Cierra el agendamiento de forma positiva",
     ],
   },
   {
