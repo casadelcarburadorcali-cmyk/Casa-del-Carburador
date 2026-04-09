@@ -53,7 +53,7 @@ Si el vehículo no aparece en el brain, responde exactamente:
 4. Si el cliente no da marca y modelo completos, pide el dato faltante.
 5. Si hay duda entre varios modelos, pide confirmación antes de recomendar.
 6. Nunca menciones un precio sin haber consultado el brain.
-7. Si video_instalacion existe en el brain, debes enviarlo en la recomendación.
+7. Si video_de_instalacion existe en el brain (no es null ni vacío), debes enviarlo en la recomendación.
 8. Si el video no existe o está vacío, no lo inventes.
 9. Siempre intenta llevar la conversación a compra o llamada.
 10. Nunca cierres sin intentarlo al menos dos veces.
@@ -89,12 +89,12 @@ Cuando ya tengas nombre y vehículo, usa este formato exacto:
 
 Estimado [nombre], le sugerimos el Kit de carburador 4K para su [Marca] [Modelo]:
 
-💰 Valor: [valor_kit del brain]
+💰 Valor: [valor_del_kit del brain, formateado como $890.000]
 
-📦 El kit incluye: [accesorios_incluidos del brain]
+📦 El kit incluye: [accesorios_incluidos del brain, lista con viñetas]
 
-🎥 Video de instalación: [video_instalacion del brain]
-   *(Si no existe video, omite esta línea)*
+🎥 Video de instalación: [video_de_instalacion del brain]
+   *(Si no existe video o es null, omite esta línea)*
 
 🚀 Qué cambia desde el primer encendido:
 - [síntoma principal del cliente] → mejora
@@ -409,7 +409,7 @@ ESCENARIOS = [
   {
     "id": "E14", "categoria": "Recomendación del Kit", "peso": 3,
     "descripcion": "Cliente con dos vehículos: solo debe recomendar uno a la vez.",
-    "turns": ["Tengo un Chevrolet Corsa y también un Renault 4, ¿cuántos kits necesito?"],
+    "turns": ["Tengo un Chevrolet Vitara y también un Renault 4, ¿cuántos kits necesito?"],
     "criterios": [
       "No recomienda dos kits en un solo mensaje",
       "Maneja los vehículos de forma ordenada (uno a la vez)",
@@ -452,7 +452,7 @@ ESCENARIOS = [
     "id": "E18", "categoria": "Manejo de Objeciones", "peso": 2,
     "descripcion": "El cliente duda si el kit sirve para su vehículo.",
     "turns": [
-      "Hola, soy Ana, tengo un Nissan Tsuru",
+      "Hola, soy Ana, tengo un Nissan 720",
       "¿Seguro que ese kit sirve para mi carro?",
     ],
     "criterios": [
@@ -492,7 +492,7 @@ ESCENARIOS = [
     "id": "E21", "categoria": "Manejo de Objeciones", "peso": 2,
     "descripcion": "El cliente pregunta por formas de pago.",
     "turns": [
-      "Hola, soy Patricia, tengo un Suzuki Maruti",
+      "Hola, soy Patricia, tengo un Daewoo Tico",
       "¿Cómo puedo pagar? ¿Aceptan tarjeta?",
     ],
     "criterios": [
@@ -504,7 +504,7 @@ ESCENARIOS = [
     "id": "E22", "categoria": "Manejo de Objeciones", "peso": 2,
     "descripcion": "El cliente pregunta por envíos.",
     "turns": [
-      "Soy Miguel, tengo un Daihatsu Charade",
+      "Soy Miguel, tengo un Daihatsu Rocky",
       "¿Hacen envíos a Barranquilla? ¿Cuánto demora?",
     ],
     "criterios": [
@@ -516,7 +516,7 @@ ESCENARIOS = [
     "id": "E23", "categoria": "Manejo de Objeciones", "peso": 2,
     "descripcion": "El cliente pregunta por repuestos y mantenimiento futuro.",
     "turns": [
-      "Hola, soy Sandra, tengo un Chevrolet Corsa",
+      "Hola, soy Sandra, tengo un Chevrolet Vitara",
       "¿Y si necesito repuestos después?",
     ],
     "criterios": [
@@ -622,7 +622,7 @@ ESCENARIOS = [
     "id": "E32", "categoria": "Reactivación / Silencios", "peso": 1,
     "descripcion": "Cliente pregunta el precio después de una pausa.",
     "turns": [
-      "Soy Ana, tengo un Chevrolet Spark",
+      "Soy Ana, tengo un Chevrolet Sprint",
       "Disculpa, ¿me puedes repetir cuánto vale?",
     ],
     "criterios": [
@@ -663,7 +663,7 @@ ESCENARIOS = [
     "id": "E35", "categoria": "Cierre de Venta", "peso": 2,
     "descripcion": "El cliente está en Medellín y pregunta por jornadas.",
     "turns": [
-      "Hola, soy Hernando, tengo un Chevrolet Corsa",
+      "Hola, soy Hernando, tengo un Chevrolet Vitara",
       "Estoy en Medellín, ¿cómo funciona la jornada allá?",
     ],
     "criterios": [
@@ -676,7 +676,7 @@ ESCENARIOS = [
     "id": "E36", "categoria": "Cierre de Venta", "peso": 3,
     "descripcion": "El cliente acepta la llamada con el asesor.",
     "turns": [
-      "Hola, soy Pilar, tengo un Nissan Tsuru",
+      "Hola, soy Pilar, tengo un Nissan 720",
       "Bueno, pueden llamarme",
     ],
     "criterios": [
@@ -689,7 +689,7 @@ ESCENARIOS = [
     "id": "E37", "categoria": "Cierre de Venta", "peso": 2,
     "descripcion": "El cliente quiere comprar pero no quiere llamadas.",
     "turns": [
-      "Hola, soy Camilo, tengo un Daihatsu Charade",
+      "Hola, soy Camilo, tengo un Daihatsu Rocky",
       "No quiero llamadas, prefiero hacerlo todo por acá",
     ],
     "criterios": [
@@ -764,7 +764,7 @@ ESCENARIOS = [
     "id": "E43", "categoria": "Nuevos Escenarios", "peso": 2,
     "descripcion": "El cliente menciona un producto más barato de la competencia.",
     "turns": [
-      "Soy Diego, tengo un Chevrolet Corsa",
+      "Soy Diego, tengo un Chevrolet Vitara",
       "Vi uno más barato en Mercado Libre a $80.000, ¿por qué el suyo es más caro?",
     ],
     "criterios": [
@@ -844,7 +844,7 @@ ESCENARIOS = [
     "id": "E49", "categoria": "Nuevos Escenarios", "peso": 2,
     "descripcion": "Cliente que ya compró vuelve con una pregunta de soporte.",
     "turns": [
-      "Hola, yo ya les compré el kit hace un mes para mi Suzuki Maruti",
+      "Hola, yo ya les compré el kit hace un mes para mi Daewoo Tico",
       "El carro sigue con marcha inestable, ¿qué hago?",
     ],
     "criterios": [

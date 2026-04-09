@@ -2,108 +2,1495 @@
   {
     "marca": "Chevrolet",
     "modelo": "Luv 1600",
-    "valor_kit": "$189.000",
-    "cilindraje": "1400cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploR9_instalacion"
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 racord combustible",
+      "1 guaya de acelerador",
+      "1 purificador con filtro de aire",
+      "1 juego de empaque de repuesto",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=Ffbx1zPZNIo&t=2s"
   },
   {
-    "marca": "Renault",
-    "modelo": "4",
-    "tipo_kit": "Kit 4K Estándar",
-    "valor_kit": "$179.000",
-    "cilindraje": "1100cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploR4_instalacion"
+    "marca": "Chevrolet",
+    "modelo": "Luv 2300",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador y filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=-RSrMsh7kjA"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Chevette 1.4",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/sk-YvYt92JE?si=r_7Q21HGdv8s_ZHD"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Chevette 1.6",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "3 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/ct1BZZ_ipgk?si=BgXWoIzdjSeXZ_8X"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Swift 1.0",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=xPv2nYYdcOc&t=6s"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Swift 1.3",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=xPv2nYYdcOc&t=6s"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Swift 1.6",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/H0pw446AyDk?si=tSoM5qr-v7ymF9ew"
   },
   {
     "marca": "Chevrolet",
     "modelo": "Sprint",
-    "tipo_kit": "Kit 4K Compacto",
-    "valor_kit": "$195.000",
-    "cilindraje": "1000cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploSprint_instalacion"
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=IULIXf3WxgA"
   },
   {
     "marca": "Chevrolet",
-    "modelo": "Corsa",
-    "tipo_kit": "Kit 4K Estándar",
-    "valor_kit": "$199.000",
-    "cilindraje": "1400cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploCorsa_instalacion"
-  },
-  {
-    "marca": "Toyota",
-    "modelo": "Corolla",
-    "tipo_kit": "Kit 4K Premium",
-    "valor_kit": "$215.000",
-    "cilindraje": "1600cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploCorolla_instalacion"
-  },
-  {
-    "marca": "Mazda",
-    "modelo": "323",
-    "tipo_kit": "Kit 4K Estándar",
-    "valor_kit": "$189.000",
-    "cilindraje": "1300cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploMazda323_instalacion"
-  },
-  {
-    "marca": "Suzuki",
-    "modelo": "Maruti",
-    "tipo_kit": "Kit 4K Compacto",
-    "valor_kit": "$175.000",
-    "cilindraje": "800cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploMaruti_instalacion"
+    "modelo": "Sprint Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.facebook.com/share/r/1BHV2e5mCg/"
   },
   {
     "marca": "Chevrolet",
-    "modelo": "Spark",
-    "tipo_kit": "Kit 4K Compacto",
-    "valor_kit": "$189.000",
-    "cilindraje": "800cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploSpark_instalacion"
+    "modelo": "Vitara",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/QYFO7m1VhOQ?si=gr7RRx7VHEAxC8ZG"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Gran Vitara",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/QYFO7m1VhOQ?si=gr7RRx7VHEAxC8ZG"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Trooper",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 tornillos ajuste platina",
+      "4 esparragos",
+      "4 tuercas",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/7szgrVG25qA?si=EDLjiTf8WP3maOBL"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Monza 1.8",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=mAGPlkza_cE&t=1s"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Monza 2.0",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "3 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/ct1BZZ_ipgk?si=BgXWoIzdjSeXZ_8X"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Samurai",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/7nVOmGyrosE?si=ORUA_EOGJ8CycWnt"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Samurai Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/_CUXJ0y8SE0?si=BahmMfPmH_AfPiYk"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "6 en línea",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro de aire",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=v9LKNJzAoP4&t=19s"
+  },
+  {
+    "marca": "Daewoo",
+    "modelo": "Tico",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador",
+      "1 gasificador",
+      "1 tapón 5/16"
+    ],
+    "video_de_instalacion": "https://youtu.be/ItyotRpubes?si=h4Qurnae1DKio3w0"
+  },
+  {
+    "marca": "Daewoo",
+    "modelo": "Racer Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/8W4zXJXZic0?si=lnAVbLpTsFQCBTeu"
+  },
+  {
+    "marca": "Daewoo",
+    "modelo": "Espero",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/8W4zXJXZic0?si=lnAVbLpTsFQCBTeu"
   },
   {
     "marca": "Daihatsu",
-    "modelo": "Charade",
-    "tipo_kit": "Kit 4K Compacto",
-    "valor_kit": "$179.000",
-    "cilindraje": "1000cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploCharade_instalacion"
+    "modelo": "Rocky",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/RCDAjGWgwxI?si=H3uQ49svM2XhM86D"
   },
   {
-    "marca": "Nissan",
-    "modelo": "Tsuru",
-    "tipo_kit": "Kit 4K Estándar",
-    "valor_kit": "$195.000",
-    "cilindraje": "1600cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploTsuru_instalacion"
+    "marca": "Daihatsu",
+    "modelo": "F10",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/RCDAjGWgwxI?si=H3uQ49svM2XhM86D"
   },
   {
-    "marca": "Mitsubishi",
-    "modelo": "Lancer",
-    "tipo_kit": "Kit 4K Estándar",
-    "valor_kit": "$199.000",
-    "cilindraje": "1500cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploLancer_instalacion"
+    "marca": "Daihatsu",
+    "modelo": "Feroza",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/RCDAjGWgwxI?si=H3uQ49svM2XhM86D"
+  },
+  {
+    "marca": "Daihatsu",
+    "modelo": "F20",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/MXvIlTTF3K0?si=CpZqtQtKi-czSYlP"
+  },
+  {
+    "marca": "Dodge",
+    "modelo": "Dart",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=Km7uTTDyC58"
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Uno Mille",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/eTK_5-rY6lo?si=El5aBiLe0vE2TUMD"
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "147",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador",
+      "1 gasificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/eTK_5-rY6lo?si=El5aBiLe0vE2TUMD"
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Mirafiori",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=uti9oFRsF28&t=17s"
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Premio",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=uti9oFRsF28&t=17s"
   },
   {
     "marca": "Ford",
     "modelo": "Festiva",
-    "tipo_kit": "Kit 4K Compacto",
-    "valor_kit": "$185.000",
-    "cilindraje": "1300cc",
-    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
-    "video_instalacion": "https://youtu.be/EjemploFestiva_instalacion"
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/FO-NY3f1Hxs?si=VC0ES0I62JSrWg4b"
+  },
+  {
+    "marca": "Ford",
+    "modelo": "6 en línea",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro de aire",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/_2Z2MW8M8xo?si=CdOaOtLDZSplJAGi"
+  },
+  {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/XKVb-V05hKQ?si=LEMLeHdwMc-sSIM4"
+  },
+  {
+    "marca": "Honda",
+    "modelo": "Accord",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/dOjxG-T-QN8?si=8bHCxgUZeu485bsY"
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "Excel",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador",
+      "1 gasificador",
+      "1 tapón 5/16"
+    ],
+    "video_de_instalacion": "https://youtu.be/V2kRknKgLzk?si=wAyRqx8cWf8dI_-J"
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "Accent",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador",
+      "1 gasificador",
+      "1 tapón 5/16"
+    ],
+    "video_de_instalacion": "https://youtu.be/V2kRknKgLzk?si=wAyRqx8cWf8dI_-J"
+  },
+  {
+    "marca": "Jeep",
+    "modelo": "CJ4",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/ZFhIV2dppkM?si=f4A_qYVYZX61eVwp"
+  },
+  {
+    "marca": "Jeep",
+    "modelo": "CJ6",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
+  },
+  {
+    "marca": "Jeep",
+    "modelo": "Willys",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "2 platinas adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/ZFhIV2dppkM?si=f4A_qYVYZX61eVwp"
+  },
+  {
+    "marca": "Kia",
+    "modelo": "Pride",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/FO-NY3f1Hxs?si=VC0ES0I62JSrWg4b"
+  },
+  {
+    "marca": "Lada",
+    "modelo": "Niva",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/VE5prJDAIvQ?si=guC_4T-qIALB6wsE"
+  },
+  {
+    "marca": "Lada",
+    "modelo": "Samara",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/HU_Gsh62gPc?si=NgZ2AtTFejRYif--"
+  },
+  {
+    "marca": "Mazda",
+    "modelo": "323",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=bMf5k1i9_ns"
+  },
+  {
+    "marca": "Mazda",
+    "modelo": "626",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=_1eonYQI2LU&t=7s"
+  },
+  {
+    "marca": "Mazda",
+    "modelo": "B2000",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/aBaxcWtj6sM?si=0oc8EJFOSpNHpLLb"
+  },
+  {
+    "marca": "Mazda",
+    "modelo": "B2200",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/aBaxcWtj6sM?si=uXRVSQcoz9UzscBW"
+  },
+  {
+    "marca": "Mazda",
+    "modelo": "121",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/P0oJhoO8QD0?si=f13T2XFrpAIVmrvQ"
+  },
+  {
+    "marca": "Mazda",
+    "modelo": "B1600",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=Ffbx1zPZNIo&t=2s"
+  },
+  {
+    "marca": "Mitsubishi",
+    "modelo": "Lancer",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/l9j-2vqiXv8?si=3XHMY9CtKBlizZKj"
+  },
+  {
+    "marca": "Mitsubishi",
+    "modelo": "Montero",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 tapón de agua",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/7PVrRGlayxo?si=Cy264UNhjJ_XC6o_"
+  },
+  {
+    "marca": "Mitsubishi",
+    "modelo": "L300",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/-8MsnCpYX8U?si=NOXaaieW74NyN12Z"
+  },
+  {
+    "marca": "Mitsubishi",
+    "modelo": "L200",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/-8MsnCpYX8U?si=NOXaaieW74NyN12Z"
+  },
+  {
+    "marca": "Mitsubishi",
+    "modelo": "Colt",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Patrol -79",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "2 platinas adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "8 tornillos ajuste platinas",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/HjpACeUOG4U?si=UVznP5aT-zr5dWrk"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Patrol +80",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador",
+      "1 brazo acelerador"
+    ],
+    "video_de_instalacion": "https://youtu.be/_3V-vNTWbEw?si=S6KDt6kvF-ZNqmcM"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Samurai",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador",
+      "1 brazo acelerador"
+    ],
+    "video_de_instalacion": "https://youtu.be/_3V-vNTWbEw?si=S6KDt6kvF-ZNqmcM"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "D21",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "3 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/_3V-vNTWbEw?si=S6KDt6kvF-ZNqmcM"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "D21 Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Pathfinder",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/x7u4CcwD4yI?si=kB5BqSR2NLI64FvR"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Sentra",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "4 esparragos mixtos",
+      "1 machuelo 3/8",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/eM3Zj58qw4E?si=E0bT-Gkhiesn56Ew"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "720",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "4 esparragos",
+      "4 tuercas",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/65uXIwiV7iE?si=gMRPz7pbY8fGjrHw"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Urban",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "3 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/a-luGknKvyc?si=CTSx2DTZgrepAgV7"
+  },
+  {
+    "marca": "Peugeot",
+    "modelo": "306 Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador",
+      "1 tapón de agua"
+    ],
+    "video_de_instalacion": "https://youtu.be/8pasHG-ZCFI?si=yShc14XqJ4RRRVG_"
+  },
+  {
+    "marca": "Peugeot",
+    "modelo": "406 Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador",
+      "1 tapón de agua"
+    ],
+    "video_de_instalacion": "https://youtu.be/8pasHG-ZCFI?si=yShc14XqJ4RRRVG_"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "4",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/Spp0MNsnDNE?si=hCLVT_BJk4BBnesr"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "6",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/p-CnWFExO0M?si=csokRgBx1TeKe9E"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "12",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/p-CnWFExO0M?si=csokRgBx1TeKe9E"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "9",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro o platina de adaptación purificador original",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/BDukNKNgUS0?si=lT2tNFM1i-IIZGzz"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "9 Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/tee7Z_Z3OJ0?si=S0PjS4BiRFJi51wr"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "18 (1.4)",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/bVXauR76xlA?si=KoBRJFz2_cTob6p3"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "18 (2.0)",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=IRiL8uIxgpQ"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "19 (1.7)",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro o platina de adaptación purificador original",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=Tg6gHcfGnLI"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "19 Monopunto",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=6pmdK1iZWvc"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "21",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro o platina de adaptación purificador original",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=IRiL8uIxgpQ"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Penta",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro o platina de adaptación purificador original",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://www.youtube.com/watch?v=IRiL8uIxgpQ"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Twingo Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/cKNRboDusPg?si=upRCTB7aAiH7uT2T"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Clio Monopunto",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/DEzYqQ19y_M?si=SrJPzDcbfuzj_ty7"
+  },
+  {
+    "marca": "Skoda",
+    "modelo": "Felicia",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador",
+      "1 gasificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/DmCnZByCzW4?si=WboIT2ketMOJma2N"
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 juego de empaque de repuesto"
+    ],
+    "video_de_instalacion": "https://youtu.be/rnI44xdqJbo"
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Tercel",
+    "valor_del_kit": 830000,
+    "accesorios_incluidos": [
+      "1 juego de empaque de repuesto"
+    ],
+    "video_de_instalacion": "https://youtu.be/rnI44xdqJbo"
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "1F",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "2 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "2F",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "2 platinas adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "8 tornillos ajuste platinas",
+      "2 empaques de la base",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "3F",
+    "valor_del_kit": 1400000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/jKxGAcj2l6o"
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Hilux",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/JNldAgEo1G8?si=GcQZ36MQ4Ial3LmW"
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "4runner",
+    "valor_del_kit": 860000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "FJ-40",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 caucho adaptador purificador",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Gol",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": "https://youtu.be/R5D1yqaHuBA?si=6kBhh5vmc30FxxpN"
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Golf",
+    "valor_del_kit": 890000,
+    "accesorios_incluidos": [
+      "1 platina adaptación de admisión",
+      "4 esparragos",
+      "4 tuercas",
+      "4 tornillos ajuste platina",
+      "2 empaques de la base",
+      "1 purificador con filtro",
+      "1 juego de empaque de repuesto",
+      "1 racord combustible",
+      "1 T de retorno",
+      "1 mico guaya",
+      "1 esparrago y tuerca de purificador"
+    ],
+    "video_de_instalacion": null
   }
 ]
