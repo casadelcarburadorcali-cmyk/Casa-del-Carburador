@@ -837,7 +837,7 @@ ESCENARIOS = [
     "criterios": [
       "Confirma la opción de instalación en Cali",
       "Solicita el número de celular del cliente",
-      "Ofrece llamar para coordinar la visita al taller",
+      "Pregunta en qué horario puede contactar al cliente",
     ],
   },
   {
