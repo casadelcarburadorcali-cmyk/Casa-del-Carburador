@@ -835,8 +835,9 @@ ESCENARIOS = [
       "Prefiero llevarlo al taller en Cali",
     ],
     "criterios": [
-      "Confirma la opción de instalación en Cali (menciona sede o dirección)",
-      "Solicita número de celular Y horario en el mismo mensaje para coordinar",
+      "Confirma la opción de instalación en Cali",
+      "Solicita el número de celular del cliente",
+      "Solicita el horario o coordina el siguiente paso",
     ],
   },
   {
