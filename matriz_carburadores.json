@@ -1,0 +1,109 @@
+[
+  {
+    "marca": "Chevrolet",
+    "modelo": "Luv 1600",
+    "valor_kit": "$189.000",
+    "cilindraje": "1400cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploR9_instalacion"
+  },
+  {
+    "marca": "Renault",
+    "modelo": "4",
+    "tipo_kit": "Kit 4K Estándar",
+    "valor_kit": "$179.000",
+    "cilindraje": "1100cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploR4_instalacion"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Sprint",
+    "tipo_kit": "Kit 4K Compacto",
+    "valor_kit": "$195.000",
+    "cilindraje": "1000cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploSprint_instalacion"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Corsa",
+    "tipo_kit": "Kit 4K Estándar",
+    "valor_kit": "$199.000",
+    "cilindraje": "1400cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploCorsa_instalacion"
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "tipo_kit": "Kit 4K Premium",
+    "valor_kit": "$215.000",
+    "cilindraje": "1600cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploCorolla_instalacion"
+  },
+  {
+    "marca": "Mazda",
+    "modelo": "323",
+    "tipo_kit": "Kit 4K Estándar",
+    "valor_kit": "$189.000",
+    "cilindraje": "1300cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploMazda323_instalacion"
+  },
+  {
+    "marca": "Suzuki",
+    "modelo": "Maruti",
+    "tipo_kit": "Kit 4K Compacto",
+    "valor_kit": "$175.000",
+    "cilindraje": "800cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploMaruti_instalacion"
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Spark",
+    "tipo_kit": "Kit 4K Compacto",
+    "valor_kit": "$189.000",
+    "cilindraje": "800cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploSpark_instalacion"
+  },
+  {
+    "marca": "Daihatsu",
+    "modelo": "Charade",
+    "tipo_kit": "Kit 4K Compacto",
+    "valor_kit": "$179.000",
+    "cilindraje": "1000cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploCharade_instalacion"
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Tsuru",
+    "tipo_kit": "Kit 4K Estándar",
+    "valor_kit": "$195.000",
+    "cilindraje": "1600cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploTsuru_instalacion"
+  },
+  {
+    "marca": "Mitsubishi",
+    "modelo": "Lancer",
+    "tipo_kit": "Kit 4K Estándar",
+    "valor_kit": "$199.000",
+    "cilindraje": "1500cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploLancer_instalacion"
+  },
+  {
+    "marca": "Ford",
+    "modelo": "Festiva",
+    "tipo_kit": "Kit 4K Compacto",
+    "valor_kit": "$185.000",
+    "cilindraje": "1300cc",
+    "accesorios_incluidos": "Carburador 4K, Junta de carburador, Filtro de aire adaptado, Manguera de combustible, Tornillería de ajuste, Kit de empaques, Adaptador de mariposa, Cable acelerador, Manual de instalación paso a paso",
+    "video_instalacion": "https://youtu.be/EjemploFestiva_instalacion"
+  }
+]
