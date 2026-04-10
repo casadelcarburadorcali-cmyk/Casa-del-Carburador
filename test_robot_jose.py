@@ -530,8 +530,8 @@ ESCENARIOS = [
     "descripcion": "El cliente menciona el modelo sin la marca; luego confirma que es Toyota.",
     "turns": ["Tengo un Corolla", "Sí, es Toyota"],
     "criterios": [
-      "Pide confirmación de la marca antes de recomendar",
-      "No recomienda kit sin confirmar marca y modelo",
+      "Al recibir solo 'Tengo un Corolla', pregunta la marca antes de recomendar (no hace recomendación aún)",
+      "Tras la confirmación 'Sí, es Toyota', recomienda el Kit para Toyota Corolla con precio y accesorios del brain",
     ],
   },
   {
