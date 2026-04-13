@@ -561,16 +561,14 @@ ESCENARIOS = [
   # ── CATEGORÍA 2: Identificación del Vehículo ───────────────
   {
     "id": "E06", "categoria": "Identificación del Vehículo", "peso": 3,
-    "descripcion": "El cliente provee nombre y vehículo; luego da el síntoma. José presenta la cotización completa.",
+    "descripcion": "El cliente da nombre, vehículo y síntoma. José presenta la cotización completa.",
     "turns": [
-      "Soy Luis, mi vehículo es un Toyota Corolla",
-      "El carro consume mucha gasolina y el encendido falla",
+      "Hola, soy Luis, tengo un Toyota Corolla y consume mucha gasolina",
     ],
     "criterios": [
-      "Tras recibir el síntoma, presenta la cotización del Toyota Corolla",
-      "Incluye el valor del kit del brain con el símbolo $",
-      "Lista múltiples accesorios del brain (al menos 3 ítems de la lista)",
-      "Incluye el video de instalación si existe en el brain",
+      "La respuesta incluye el valor en $ del kit del Toyota Corolla tomado del brain",
+      "La respuesta incluye accesorios del Toyota Corolla del brain",
+      "La respuesta incluye el video de instalación del brain o pregunta el diagnóstico",
     ],
   },
   {
