@@ -512,9 +512,9 @@ ESCENARIOS = [
     "descripcion": "El cliente envía un saludo inicial sin contexto.",
     "turns": ["Hola"],
     "criterios": [
-      "Responde con la frase exacta '¡Hola! Soy José del equipo Casa del Carburador 👋'",
-      "No incluye información adicional antes de pedir el nombre",
-      "Solicita el nombre del cliente como siguiente paso",
+      "Incluye la frase de saludo estándar con el nombre 'José' y 'Casa del Carburador'",
+      "Solicita el nombre y/o el vehículo del cliente en el mismo mensaje",
+      "No presenta precio ni cotización en el saludo inicial",
     ],
   },
   {
@@ -604,9 +604,9 @@ ESCENARIOS = [
     "descripcion": "Vehículo moderno de inyección electrónica multipunto.",
     "turns": ["Tengo un Toyota Prius 2022"],
     "criterios": [
-      "No inventa compatibilidad",
-      "No recomienda un kit no existente en la matriz",
-      "Usa la frase de validación o explica el contexto del kit",
+      "Incluye la frase de validación: 'Voy a validar compatibilidad de nuestro kit con su vehículo. Un momento por favor.'",
+      "No afirma que el Toyota Prius es compatible con el Kit de Carburador 4K",
+      "No presenta precio ni accesorios para el Toyota Prius",
     ],
   },
   {
@@ -614,8 +614,8 @@ ESCENARIOS = [
     "descripcion": "El cliente especifica año y modelo.",
     "turns": ["Soy Pedro, tengo un Chevrolet Spark GT 2012"],
     "criterios": [
-      "Busca en la matriz usando marca y modelo",
-      "No inventa datos si no hay coincidencia exacta con el año",
+      "No pregunta el año del vehículo para buscarlo en la matriz",
+      "Si el Spark GT no está en la matriz, usa la frase de validación correcta",
     ],
   },
   {
@@ -623,8 +623,8 @@ ESCENARIOS = [
     "descripcion": "El cliente usa un apodo coloquial del vehículo.",
     "turns": ["Tengo un campero Suzuki"],
     "criterios": [
-      "No asume el modelo sin confirmación",
-      "Solicita el modelo específico de forma breve",
+      "Reconoce 'campero' como apodo y solicita el modelo específico de Suzuki",
+      "No recomienda ningún kit sin conocer el modelo exacto",
     ],
   },
 
@@ -664,8 +664,8 @@ ESCENARIOS = [
     "descripcion": "Verificar que el video incluido proviene del brain y no es inventado.",
     "turns": ["Soy Carolina, tengo un Chevrolet Sprint, el encendido falla y consume mucha gasolina"],
     "criterios": [
-      "El video incluido proviene del brain (no es un link inventado)",
-      "Si no hay video en el brain, no incluye ningún link de video de instalación",
+      "Incluye el video de instalación del brain: https://www.youtube.com/watch?v=IULIXf3WxgA",
+      "NO incluye el video de testimonios de ahorro (v3J1ICgggH8) como video de instalación del kit",
     ],
   },
 
@@ -691,9 +691,9 @@ ESCENARIOS = [
       "¿Seguro que ese kit sirve para mi carro?",
     ],
     "criterios": [
-      "Confirma la compatibilidad con base en la matriz",
-      "Transmite confianza y seguridad",
-      "No inventa información adicional",
+      "En el primer turno, presenta la cotización del Nissan 720 con el valor del brain",
+      "En el segundo turno, confirma con seguridad que el kit aplica para el Nissan 720",
+      "Termina el segundo turno con un intento de cierre o invitación a comprar",
     ],
   },
   {
@@ -731,8 +731,8 @@ ESCENARIOS = [
       "¿Cómo puedo pagar? ¿Aceptan tarjeta?",
     ],
     "criterios": [
-      "Menciona Bancolombia o Davivienda a nombre de CASA DEL CARBURADOR SAS",
-      "No inventa métodos de pago no definidos en el prompt",
+      "Informa que no aceptan tarjeta de crédito ni pago contra-entrega",
+      "Indica transferencia bancaria a Bancolombia o Davivienda como método de pago",
     ],
   },
   {
@@ -743,8 +743,8 @@ ESCENARIOS = [
       "¿Hacen envíos a Barranquilla? ¿Cuánto demora?",
     ],
     "criterios": [
-      "Confirma que hay envíos nacionales",
-      "No inventa tiempos ni costos de envío específicos",
+      "Confirma que hay envíos nacionales por Interrapidísimo o Servientrega",
+      "No inventa tiempos de entrega específicos en días u horas (mencionar aprox. $20.000 es correcto)",
     ],
   },
   {
@@ -755,8 +755,8 @@ ESCENARIOS = [
       "¿Y si necesito repuestos después?",
     ],
     "criterios": [
-      "Menciona los 200.000 km de vida útil",
-      "Confirma disponibilidad de repuestos o soporte",
+      "Menciona la vida útil de 200.000 km del kit",
+      "Menciona que los empaques de repuesto están incluidos en el kit",
     ],
   },
   {
@@ -803,8 +803,8 @@ ESCENARIOS = [
     "descripcion": "El cliente pregunta por productos no relacionados.",
     "turns": ["¿Venden bujías o aceites?"],
     "criterios": [
-      "No inventa catálogo de productos",
-      "Centra la conversación en el Kit 4K",
+      "No inventa catálogo de productos (no dice que venden bujías ni aceites)",
+      "Redirige al cliente hacia el kit de carburador como producto principal",
     ],
   },
   {
@@ -812,8 +812,8 @@ ESCENARIOS = [
     "descripcion": "El cliente hace una pregunta completamente ajena al negocio.",
     "turns": ["¿Cuál es la capital de Francia?"],
     "criterios": [
-      "No responde la pregunta fuera del dominio",
-      "Redirige hacia el Kit 4K de forma amable",
+      "No responde la pregunta sobre la capital de Francia",
+      "Redirige al cliente hacia los servicios de Casa del Carburador de forma amable",
     ],
   },
   {
@@ -821,8 +821,8 @@ ESCENARIOS = [
     "descripcion": "El cliente pregunta por el costo de instalación en taller.",
     "turns": ["¿Cuánto cobran por instalar el kit en Cali?"],
     "criterios": [
-      "No inventa precios de instalación",
-      "Ofrece agendar llamada para detalles",
+      "Indica que la instalación en Cali no tiene costo adicional",
+      "Propone agendar una llamada o coordinar el siguiente paso",
     ],
   },
 
@@ -890,9 +890,9 @@ ESCENARIOS = [
       "Prefiero llevarlo al taller en Cali",
     ],
     "criterios": [
-      "Confirma la opción de instalación en Cali",
-      "Solicita el número de celular del cliente",
-      "Solicita el horario o coordina el siguiente paso",
+      "Confirma la opción de instalación en Cali (dirección Cr 14 no 20-19 o sin costo adicional)",
+      "Inicia el proceso de adquisición: pregunta banco de pago o solicita datos del pedido",
+      "No abandona el flujo de cierre",
     ],
   },
   {
@@ -927,12 +927,12 @@ ESCENARIOS = [
     "descripcion": "El cliente quiere comprar pero no quiere llamadas.",
     "turns": [
       "Hola, soy Camilo, tengo un Daihatsu Rocky, consume mucha gasolina",
-      "No quiero llamadas, prefiero hacerlo todo por acá",
+      "No quiero llamadas, quiero comprarlo por acá, ¿cómo hago?",
     ],
     "criterios": [
-      "Ofrece WhatsApp o chat como alternativa a la llamada",
-      "No abandona el proceso de cierre",
-      "Solicita datos para coordinar el pedido sin llamada",
+      "No insiste en hacer una llamada cuando el cliente la rechaza",
+      "Guía al cliente hacia el proceso de pago por Bancolombia o Davivienda",
+      "Solicita datos necesarios para coordinar el pedido (nombre, cédula, dirección u otro)",
     ],
   },
   {
@@ -977,11 +977,12 @@ ESCENARIOS = [
     "turns": [
       "Hola, soy Álvaro, tengo un Renault 4",
       "Espera, en realidad el carro es de mi esposa. El mío es un Chevrolet Sprint",
+      "Pierde potencia y consume mucha gasolina",
     ],
     "criterios": [
-      "Actualiza el vehículo sin confundirse",
-      "Consulta el brain para el nuevo vehículo",
-      "No mezcla datos del vehículo anterior",
+      "Tras el cambio, continúa con el Chevrolet Sprint (no el Renault 4)",
+      "En el tercer turno, presenta la cotización del Chevrolet Sprint con datos del brain",
+      "No incluye ni confunde datos del Renault 4 en la cotización del Sprint",
     ],
   },
   {
@@ -1060,7 +1061,7 @@ ESCENARIOS = [
     "criterios": [
       "Sigue el orden: saludo → nombre → vehículo → diagnóstico → cotización → cierre",
       "Recomienda el kit con formato completo (valor, accesorios, beneficios)",
-      "Al agendar llamada, pregunta el horario disponible en las próximas 24 horas",
+      "Confirma el agendamiento de la llamada con el horario indicado por el cliente (mañana a las 3pm)",
       "No pierde el hilo en ningún turno",
     ],
   },
@@ -1100,10 +1101,10 @@ ESCENARIOS = [
       "Déjame pensarlo un poco",
     ],
     "criterios": [
-      "Maneja cada objeción con la respuesta definida en el prompt",
-      "No abandona el flujo comercial tras cada objeción",
-      "Hace al menos dos intentos de cierre a lo largo de la conversación",
-      "Propone agendamiento de llamada al final",
+      "Responde la objeción de precio mencionando el ahorro en gasolina (15% o 1 millón al año)",
+      "Responde la objeción de instalación mencionando el video, la sede de Cali o las jornadas",
+      "Ante 'Déjame pensarlo', pregunta la duda específica o propone agendar una llamada",
+      "No abandona el flujo comercial tras ninguna de las tres objeciones",
     ],
   },
 ]
