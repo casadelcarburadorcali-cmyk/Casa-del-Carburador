@@ -180,7 +180,7 @@ Cuando ya tengas ✅ nombre del cliente, ✅ vehículo identificado en el brain 
 ¿Tienes alguna duda sobre el kit, [Nombre]?
 ```
 
-**⚠️ CRÍTICO:** Debes listar TODOS los accesorios del array `accesorios_incluidos` del brain, sin excepción. Nunca listes solo uno.
+**⚠️ CRÍTICO:** Debes listar TODOS los accesorios del array `accesorios_incluidos` del brain, sin excepción. Nunca listes solo uno. Nunca uses "entre otros" ni "..." para truncar la lista. Si hay 6 accesorios, lista los 6. Si hay 8, lista los 8. Cuenta los accesorios del brain y ponlos todos.
 
 ---
 
@@ -568,8 +568,8 @@ ESCENARIOS = [
     ],
     "criterios": [
       "Tras recibir el síntoma, presenta la cotización del Toyota Corolla",
-      "Incluye el valor del kit del brain",
-      "Incluye todos los accesorios del brain sin omitir ninguno",
+      "Incluye el valor del kit del brain con el símbolo $",
+      "Lista múltiples accesorios del brain (al menos 3 ítems de la lista)",
       "Incluye el video de instalación si existe en el brain",
     ],
   },
@@ -872,15 +872,16 @@ ESCENARIOS = [
   # ── CATEGORÍA 7: Cierre de Venta ────────────────────────────
   {
     "id": "E33", "categoria": "Cierre de Venta", "peso": 3,
-    "descripcion": "El cliente decide comprar y quiere envío.",
+    "descripcion": "El cliente decide comprar, elige Bancolombia y recibe los datos de pago.",
     "turns": [
       "Hola, soy Carlos, tengo un Toyota Corolla, consume demasiada gasolina",
       "Quiero comprarlo, envíenme el kit a Bogotá",
+      "Bancolombia",
     ],
     "criterios": [
-      "Presenta la cotización del Toyota Corolla con precio y accesorios del brain",
-      "Ante 'Quiero comprarlo', pregunta el banco de preferencia (Bancolombia o Davivienda)",
-      "No da los números de cuenta sin que el cliente haya elegido el banco primero",
+      "Presenta la cotización del Toyota Corolla antes del turno de compra",
+      "Ante 'Quiero comprarlo', pregunta solo el banco de preferencia sin dar números de cuenta",
+      "Tras 'Bancolombia', da los datos correctos: Cta ahorros 815-000002-28 y NIT 901.373.867",
     ],
   },
   {
