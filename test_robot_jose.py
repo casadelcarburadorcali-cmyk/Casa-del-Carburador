@@ -195,7 +195,9 @@ Las siguientes frases indican que el cliente quiere comprar — actúa de inmedi
 Cuando recibas cualquiera de estas señales, responde ÚNICAMENTE con:
 "Perfecto [Nombre]. ¿Prefieres pagar por Bancolombia o Davivienda?"
 
-Cuando el cliente confirme el banco, envía los datos correspondientes:
+**⚠️ CRÍTICO:** DETENTE ahí. NO des los datos bancarios en este mensaje. NO des los datos de ambos bancos al mismo tiempo. ESPERA a que el cliente elija el banco. SOLO después de que el cliente diga "Bancolombia" o "Davivienda", envía los datos del banco elegido.
+
+Cuando el cliente confirme el banco, envía ÚNICAMENTE los datos del banco elegido:
 
 Si elige Bancolombia:
 • Titular: Casa del Carburador SAS
@@ -559,12 +561,15 @@ ESCENARIOS = [
   # ── CATEGORÍA 2: Identificación del Vehículo ───────────────
   {
     "id": "E06", "categoria": "Identificación del Vehículo", "peso": 3,
-    "descripcion": "El cliente provee nombre, marca, modelo y síntoma (existe en matriz).",
-    "turns": ["Soy Luis, mi vehículo es un Toyota Corolla y consume mucha gasolina"],
+    "descripcion": "El cliente provee nombre y vehículo; luego da el síntoma. José presenta la cotización completa.",
+    "turns": [
+      "Soy Luis, mi vehículo es un Toyota Corolla",
+      "El carro consume mucha gasolina y el encendido falla",
+    ],
     "criterios": [
-      "Consulta el brain y usa datos reales (no inventados)",
+      "Tras recibir el síntoma, presenta la cotización del Toyota Corolla",
       "Incluye el valor del kit del brain",
-      "Incluye todos los accesorios del brain",
+      "Incluye todos los accesorios del brain sin omitir ninguno",
       "Incluye el video de instalación si existe en el brain",
     ],
   },
