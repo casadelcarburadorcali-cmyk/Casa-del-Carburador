@@ -1291,6 +1291,7 @@ def generar_reporte_markdown(resultados: list, escenarios: list, ts: str) -> Pat
 def main():
     parser = argparse.ArgumentParser(description="Robot de pruebas — José, Agente Comercial")
     parser.add_argument("--escenario", help="ID del escenario a ejecutar (ej: E01)")
+    parser.add_argument("--escenarios", help="Lista de IDs separados por coma (ej: E01,E10,E16)")
     parser.add_argument("--categoria", help="Nombre parcial de categoría (ej: Apertura)")
     parser.add_argument("--dry-run", action="store_true", help="Lista escenarios sin ejecutar")
     args = parser.parse_args()
@@ -1301,6 +1302,15 @@ def main():
         escenarios_a_ejecutar = [e for e in ESCENARIOS if e["id"].upper() == args.escenario.upper()]
         if not escenarios_a_ejecutar:
             print(f"[ERROR] Escenario '{args.escenario}' no encontrado.")
+            sys.exit(1)
+    elif args.escenarios:
+        ids = [x.strip().upper() for x in args.escenarios.split(",")]
+        escenarios_a_ejecutar = [e for e in ESCENARIOS if e["id"].upper() in ids]
+        no_encontrados = [i for i in ids if i not in {e["id"].upper() for e in escenarios_a_ejecutar}]
+        if no_encontrados:
+            print(f"[WARN] IDs no encontrados: {', '.join(no_encontrados)}")
+        if not escenarios_a_ejecutar:
+            print("[ERROR] Ningún escenario encontrado.")
             sys.exit(1)
     elif args.categoria:
         escenarios_a_ejecutar = [
