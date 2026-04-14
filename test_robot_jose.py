@@ -26,9 +26,9 @@ MODELO_JOSE = "claude-opus-4-6"
 MODELO_JUEZ = "claude-haiku-4-5"
 MAX_TOKENS_JOSE = 1024
 MAX_TOKENS_JUEZ = 700
-PAUSA = 0.4  # segundos entre llamadas
-TIMEOUT = 120  # segundos antes de abortar una llamada a la API
-MAX_REINTENTOS = 3  # reintentos ante timeout o error transitorio
+PAUSA = 3.0          # segundos entre llamadas (aumentado para evitar rate-limit)
+TIMEOUT = 240        # segundos antes de abortar una llamada a la API
+MAX_REINTENTOS = 4   # reintentos ante timeout o error transitorio
 RUTA_MATRIZ = Path(__file__).parent / "matriz_carburadores.json"
 
 
@@ -408,7 +408,7 @@ def cargar_matriz() -> list:
 
 
 def construir_system_prompt(matriz: list) -> str:
-    matriz_json = json.dumps(matriz, ensure_ascii=False, indent=2)
+    matriz_json = json.dumps(matriz, ensure_ascii=False, separators=(',', ':'))
     return (
         JOSE_PROMPT_BASE.strip()
         + "\n\n---\n\n"
@@ -1304,15 +1304,34 @@ def generar_reporte_markdown(resultados: list, escenarios: list, ts: str) -> Pat
 # FUNCIÓN PRINCIPAL
 # ─────────────────────────────────────────────────────────────
 
+def cargar_progreso(ruta: Path) -> list:
+    """Carga resultados parciales de una sesión anterior."""
+    if ruta.exists():
+        with open(ruta, encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def guardar_progreso(resultados: list, ruta: Path) -> None:
+    """Guarda resultados parciales después de cada escenario."""
+    with open(ruta, "w", encoding="utf-8") as f:
+        json.dump(resultados, f, ensure_ascii=False, indent=2)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Robot de pruebas — José, Agente Comercial")
-    parser.add_argument("--escenario", help="ID del escenario a ejecutar (ej: E01)")
+    parser.add_argument("--escenario",  help="ID único a ejecutar (ej: E01)")
     parser.add_argument("--escenarios", help="Lista de IDs separados por coma (ej: E01,E10,E16)")
-    parser.add_argument("--categoria", help="Nombre parcial de categoría (ej: Apertura)")
-    parser.add_argument("--dry-run", action="store_true", help="Lista escenarios sin ejecutar")
+    parser.add_argument("--categoria",  help="Nombre parcial de categoría (ej: Apertura)")
+    parser.add_argument("--desde",      help="Reanudar desde este ID (ej: E15)")
+    parser.add_argument("--pausa",      type=float, default=PAUSA,
+                        help=f"Segundos entre llamadas (default: {PAUSA})")
+    parser.add_argument("--dry-run",    action="store_true", help="Lista escenarios sin ejecutar")
     args = parser.parse_args()
 
-    # Filtrar escenarios
+    pausa = args.pausa
+
+    # ── Filtrar escenarios ──────────────────────────────────────
     escenarios_a_ejecutar = ESCENARIOS[:]
     if args.escenario:
         escenarios_a_ejecutar = [e for e in ESCENARIOS if e["id"].upper() == args.escenario.upper()]
@@ -1337,7 +1356,7 @@ def main():
             print(f"[ERROR] No hay escenarios para categoría '{args.categoria}'.")
             sys.exit(1)
 
-    # Dry run: solo listar
+    # ── Dry run ─────────────────────────────────────────────────
     if args.dry_run:
         print(f"\n{'ID':<6} {'Categoría':<35} {'Peso':<6} Descripción")
         print("-" * 90)
@@ -1346,33 +1365,60 @@ def main():
         print(f"\nTotal: {len(escenarios_a_ejecutar)} escenarios")
         return
 
-    # Cargar matriz y preparar sistema
+    # ── Cargar matriz ───────────────────────────────────────────
     print("\n🔧  Cargando matriz de carburadores...")
     try:
         matriz = cargar_matriz()
         print(f"    ✓ {len(matriz)} vehículos cargados")
     except FileNotFoundError:
-        print(f"[ERROR] No se encontró '{RUTA_MATRIZ}'. Asegúrate de que exista.")
+        print(f"[ERROR] No se encontró '{RUTA_MATRIZ}'.")
         sys.exit(1)
 
     system_prompt = construir_system_prompt(matriz)
     client = anthropic.Anthropic()
 
+    # ── Archivo de progreso incremental ─────────────────────────
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    ruta_progreso = Path(__file__).parent / "progreso_parcial.json"
+
+    # Reanudar desde progreso anterior si existe y se usa --desde
+    resultados: list = []
+    ids_completados: set = set()
+    if args.desde and ruta_progreso.exists():
+        resultados = cargar_progreso(ruta_progreso)
+        ids_completados = {r["id"] for r in resultados}
+        ts = resultados[0].get("ts", ts) if resultados else ts
+        print(f"    ✓ Progreso cargado: {len(resultados)} escenarios ya completados")
+
+    # Saltar escenarios ya completados si se reanuda
+    if args.desde:
+        desde_upper = args.desde.upper()
+        ids_lista = [e["id"] for e in escenarios_a_ejecutar]
+        if desde_upper in ids_lista:
+            idx_desde = ids_lista.index(desde_upper)
+            escenarios_a_ejecutar = escenarios_a_ejecutar[idx_desde:]
+            print(f"    ✓ Reanudando desde {desde_upper}")
+        else:
+            # Saltar los ya completados
+            escenarios_a_ejecutar = [e for e in escenarios_a_ejecutar
+                                     if e["id"] not in ids_completados]
+
     print(f"\n🤖  Modelo José  : {MODELO_JOSE}")
     print(f"⚖️   Modelo Juez  : {MODELO_JUEZ}")
     print(f"📋  Escenarios   : {len(escenarios_a_ejecutar)}")
+    print(f"⏱️   Pausa        : {pausa}s entre llamadas")
     print("\n" + "=" * 60)
 
-    resultados = []
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-
+    total = len(escenarios_a_ejecutar)
     for i, escenario in enumerate(escenarios_a_ejecutar, 1):
-        print(f"\n[{i:02d}/{len(escenarios_a_ejecutar)}] {escenario['id']} — {escenario['descripcion'][:55]}")
+        print(f"\n[{i:02d}/{total}] {escenario['id']} — {escenario['descripcion'][:55]}")
 
         # Ejecutar conversación
         print("    ▶ Ejecutando conversación...", end="", flush=True)
         conversacion = ejecutar_escenario(client, escenario, system_prompt)
         print(" ✓")
+
+        time.sleep(pausa)
 
         # Evaluar con el juez
         print("    ⚖  Evaluando con juez...", end="", flush=True)
@@ -1385,6 +1431,7 @@ def main():
 
         resultados.append({
             "id": escenario["id"],
+            "ts": ts,
             "categoria": escenario["categoria"],
             "descripcion": escenario["descripcion"],
             "peso": escenario["peso"],
@@ -1392,7 +1439,13 @@ def main():
             "evaluacion": evaluacion,
         })
 
-    # Calcular puntaje global
+        # Guardar progreso después de cada escenario
+        guardar_progreso(resultados, ruta_progreso)
+
+        if i < total:
+            time.sleep(pausa)
+
+    # ── Resultados finales ──────────────────────────────────────
     puntaje_global = (
         sum(r["evaluacion"]["puntaje"] * r["peso"] for r in resultados)
         / sum(r["peso"] for r in resultados)
@@ -1405,9 +1458,12 @@ def main():
     print(f"    Aprobados (≥70)          : {aprobados}/{len(resultados)}")
     print(f"    Fallidos  (<70)          : {len(resultados)-aprobados}/{len(resultados)}")
 
-    # Guardar reportes
     ruta_json = generar_reporte_json(resultados, ts)
     ruta_md   = generar_reporte_markdown(resultados, escenarios_a_ejecutar, ts)
+
+    # Limpiar progreso parcial si completó exitosamente
+    if ruta_progreso.exists():
+        ruta_progreso.unlink()
 
     print(f"\n📁  Reportes guardados:")
     print(f"    {ruta_json.name}")
