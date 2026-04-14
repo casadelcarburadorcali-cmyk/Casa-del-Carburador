@@ -27,6 +27,8 @@ MODELO_JUEZ = "claude-haiku-4-5"
 MAX_TOKENS_JOSE = 1024
 MAX_TOKENS_JUEZ = 700
 PAUSA = 0.4  # segundos entre llamadas
+TIMEOUT = 120  # segundos antes de abortar una llamada a la API
+MAX_REINTENTOS = 3  # reintentos ante timeout o error transitorio
 RUTA_MATRIZ = Path(__file__).parent / "matriz_carburadores.json"
 
 
@@ -425,6 +427,32 @@ def formatear_conversacion(mensajes: list) -> str:
     return "\n\n".join(lineas)
 
 
+def llamar_api(client: anthropic.Anthropic, modelo: str, max_tokens: int,
+               messages: list, system: str = None) -> str:
+    """Llama a la API con reintentos ante timeout o error transitorio."""
+    espera = 2
+    for intento in range(1, MAX_REINTENTOS + 1):
+        try:
+            kwargs = dict(model=modelo, max_tokens=max_tokens,
+                          messages=messages, timeout=TIMEOUT)
+            if system:
+                kwargs["system"] = system
+            resp = client.messages.create(**kwargs)
+            return resp.content[0].text
+        except Exception as e:
+            msg = str(e).lower()
+            es_transitorio = any(k in msg for k in
+                                 ["timeout", "stream idle", "connection", "502", "503", "529"])
+            if es_transitorio and intento < MAX_REINTENTOS:
+                print(f"\n    ⚠ Timeout/error transitorio (intento {intento}/{MAX_REINTENTOS}). "
+                      f"Reintentando en {espera}s...")
+                time.sleep(espera)
+                espera *= 2
+            else:
+                return f"[ERROR API: {e}]"
+    return "[ERROR API: máx. reintentos alcanzados]"
+
+
 def ejecutar_escenario(client: anthropic.Anthropic, escenario: dict, system_prompt: str) -> list:
     """
     Ejecuta un escenario multi-turno.
@@ -434,16 +462,8 @@ def ejecutar_escenario(client: anthropic.Anthropic, escenario: dict, system_prom
     for turno_usuario in escenario["turns"]:
         mensajes.append({"role": "user", "content": turno_usuario})
         time.sleep(PAUSA)
-        try:
-            resp = client.messages.create(
-                model=MODELO_JOSE,
-                max_tokens=MAX_TOKENS_JOSE,
-                system=system_prompt,
-                messages=mensajes,
-            )
-            texto_jose = resp.content[0].text
-        except Exception as e:
-            texto_jose = f"[ERROR API: {e}]"
+        texto_jose = llamar_api(client, MODELO_JOSE, MAX_TOKENS_JOSE,
+                                mensajes, system=system_prompt)
         mensajes.append({"role": "assistant", "content": texto_jose})
     return mensajes
 
@@ -480,14 +500,10 @@ Devuelve ÚNICAMENTE un objeto JSON válido con esta estructura exacta (sin text
 }}"""
 
     time.sleep(PAUSA)
+    raw = llamar_api(client, MODELO_JUEZ, MAX_TOKENS_JUEZ,
+                     [{"role": "user", "content": prompt_juez}])
     try:
-        resp = client.messages.create(
-            model=MODELO_JUEZ,
-            max_tokens=MAX_TOKENS_JUEZ,
-            messages=[{"role": "user", "content": prompt_juez}],
-        )
-        raw = resp.content[0].text.strip()
-        # Extraer JSON si viene con texto adicional
+        raw = raw.strip()
         match = re.search(r'\{.*\}', raw, re.DOTALL)
         if match:
             raw = match.group(0)
@@ -497,7 +513,7 @@ Devuelve ÚNICAMENTE un objeto JSON válido con esta estructura exacta (sin text
             "puntaje": 0,
             "criterios_cumplidos": [],
             "criterios_fallidos": escenario["criterios"],
-            "feedback": f"Error al evaluar: {e}",
+            "feedback": f"Error al parsear respuesta del juez: {e}",
         }
 
 
