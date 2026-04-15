@@ -11,6 +11,7 @@ Uso:
 """
 
 import anthropic
+import httpx
 import json
 import time
 import argparse
@@ -22,13 +23,16 @@ from pathlib import Path
 # ─────────────────────────────────────────────────────────────
 # CONFIGURACIÓN
 # ─────────────────────────────────────────────────────────────
-MODELO_JOSE = "claude-opus-4-6"
+MODELO_JOSE = "claude-sonnet-4-6"   # Sonnet: 3-4x más rápido que Opus
 MODELO_JUEZ = "claude-haiku-4-5"
 MAX_TOKENS_JOSE = 1024
 MAX_TOKENS_JUEZ = 700
-PAUSA = 3.0          # segundos entre llamadas (aumentado para evitar rate-limit)
-TIMEOUT = 240        # segundos antes de abortar una llamada a la API
-MAX_REINTENTOS = 4   # reintentos ante timeout o error transitorio
+PAUSA = 2.0          # segundos entre llamadas
+MAX_REINTENTOS = 4   # reintentos ante error transitorio
+
+# Timeout real: configurado en el cliente httpx, no en cada llamada.
+# connect=30s (establecer conexión), read=None (sin límite entre bytes del stream)
+HTTPX_TIMEOUT = httpx.Timeout(connect=30.0, read=None, write=30.0, pool=30.0)
 RUTA_MATRIZ = Path(__file__).parent / "matriz_carburadores.json"
 
 
@@ -433,8 +437,8 @@ def llamar_api(client: anthropic.Anthropic, modelo: str, max_tokens: int,
     espera = 2
     for intento in range(1, MAX_REINTENTOS + 1):
         try:
-            kwargs = dict(model=modelo, max_tokens=max_tokens,
-                          messages=messages, timeout=TIMEOUT)
+            # El timeout lo maneja el cliente httpx (read=None = sin límite entre bytes)
+            kwargs = dict(model=modelo, max_tokens=max_tokens, messages=messages)
             if system:
                 kwargs["system"] = system
             resp = client.messages.create(**kwargs)
@@ -1375,7 +1379,8 @@ def main():
         sys.exit(1)
 
     system_prompt = construir_system_prompt(matriz)
-    client = anthropic.Anthropic()
+    # read=None elimina el "stream idle timeout": no hay límite de tiempo entre bytes
+    client = anthropic.Anthropic(timeout=HTTPX_TIMEOUT)
 
     # ── Archivo de progreso incremental ─────────────────────────
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
